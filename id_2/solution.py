@@ -1,14 +1,10 @@
 def fib(largest_number):
-	result = [];
-	i=1
-	result.append(i)
-	i+=i
-	result.append(i)
+	result = [1,2];
 
-	while i < largest_number:
+	while result[-1] < largest_number:
 		i = result[-1] + result[-2]
 		result.append(i)
-
+		
 	return result
 
 
