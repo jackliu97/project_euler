@@ -1,15 +1,7 @@
 from math import *
 
 def is_palindromic(num):
-	num_str = str(num)
-
-	hlf = floor((len(num_str)/2))
-
-	for i in range(0, hlf):
-		if(num_str[i] != num_str[-(i+1)]):
-			return False
-
-	return True
+	return str(num) == str(num)[::-1]
 
 #skip
 # 1. all divisible by 10
