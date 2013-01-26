@@ -1,8 +1,9 @@
 from math import *
 
 def prime(num):
-	for i in range(2, ceil(sqrt(num))):
-		if(num%i == 0):
+	top = int(sqrt(num)) + 1
+	for i in range(1, top):
+		if((num%i == 0) and (i > 1)):
 			return False
 	return True
 
