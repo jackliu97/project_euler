@@ -11,7 +11,6 @@ def prime(num):
 count = 0
 for i in range(2, 10001**2):
 	if(prime(i)):
-		print(i)
 		count += 1
 
 		if(count == 10001):
