@@ -14,3 +14,18 @@ while(factors(tri(i)) <= 500):
 	i += 1
 
 print(tri(i))
+
+
+
+#
+# Not used: Much Much faster approach.
+# Find combinations of prime factors to get number of factors.
+#
+def p_factors(num):
+	s = []
+	for i in range(2, num+1):
+		if(num%i == 0):
+			s.append(i)
+			x = num/i
+			return (s + p_factors(int(x)))
+	return s
