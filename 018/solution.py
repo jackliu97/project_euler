@@ -20,15 +20,11 @@ ps = inp_list.pop() #previous sums
 
 def process(prev, curr):
 	new_sum = []
-	for val in curr:
-		s = 0
-		ind = curr.index(val)
-		if prev[ind] > prev[ind+1]:
-			s = val + prev[ind]
-		else:
-			s = val + prev[ind+1]
-
-		new_sum.append(s)
+	ind = 0
+	curr.reverse()
+	while len(curr):
+		new_sum.append(curr.pop() + max(prev[ind], prev[ind+1]))
+		ind += 1
 	return new_sum
 
 for i in reversed(inp_list):

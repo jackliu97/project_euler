@@ -11,14 +11,7 @@ def process(prev, curr):
 	ind = 0
 	curr.reverse()
 	while len(curr):
-		val = curr.pop()
-		s = 0
-		if prev[ind] > prev[ind+1]:
-			s = val + prev[ind]
-		else:
-			s = val + prev[ind+1]
-
-		new_sum.append(s)
+		new_sum.append(curr.pop() + max(prev[ind], prev[ind+1]))
 		ind += 1
 	return new_sum
 
